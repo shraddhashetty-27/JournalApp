@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/signUpFragment2">
+
+    <fragment
+        android:id="@+id/signUpFragment2"
+        android:name="com.example.notepad.view.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment2_to_signInFragment2"
+            app:destination="@id/signInFragment2" />
+        <action
+            android:id="@+id/action_signUpFragment2_to_clickAddNewNoteFragment"
+            app:destination="@id/clickAddNewNoteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInFragment2"
+        android:name="com.example.notepad.view.SignInFragment"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in" >
+        <action
+            android:id="@+id/action_signInFragment2_to_signUpFragment2"
+            app:destination="@id/signUpFragment2" />
+        <action
+            android:id="@+id/action_signInFragment2_to_noteFragment"
+            app:destination="@id/noteFragment" />
+        <action
+            android:id="@+id/action_signInFragment2_to_clickAddNewNoteFragment2"
+            app:destination="@id/clickAddNewNoteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/noteFragment"
+        android:name="com.example.notepad.view.NoteFragment"
+        android:label="NoteFragment"
+        tools:layout="@layout/note_design">
+        <action
+            android:id="@+id/action_noteFragment_to_signInFragment2"
+            app:destination="@id/signInFragment2" />
+        <action
+            android:id="@+id/action_noteFragment_to_clickAddNewNoteFragment"
+            app:destination="@id/clickAddNewNoteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addNewNoteFragment"
+        android:name="com.example.notepad.view.AddNewNoteFragment"
+        android:label="fragment_add_new_note"
+        tools:layout="@layout/fragment_add_new_note" >
+        <action
+            android:id="@+id/action_addNewNoteFragment_to_noteFragment"
+            app:destination="@id/noteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/clickAddNewNoteFragment"
+        android:name="com.example.notepad.view.ClickAddNewNoteFragment"
+        android:label="fragment_click_add_new_note"
+        tools:layout="@layout/fragment_click_add_new_note" >
+        <action
+            android:id="@+id/action_clickAddNewNoteFragment_to_addNewNoteFragment"
+            app:destination="@id/addNewNoteFragment" />
+    </fragment>
+</navigation>
